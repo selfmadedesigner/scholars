@@ -71,7 +71,6 @@ body {
 /* my code */
 .hero {
 	background: #f89720;
-    height: 448px;
 	display: flex;
 	align-items: center;
 	color: #fff;
@@ -98,6 +97,7 @@ body {
 .hero-image img {
 	width: auto;
 	height: 450px;
+    padding-top: 10%;
 }
 
 .italic-span {
@@ -199,14 +199,31 @@ body {
 }
 
 .partner-logo {
-	height: 5em;
-	width: 20%;
+	/*height: 5em;
+	width: 20%; fix logo positioning after adding a tag for links*/
 	object-fit: contain;
 	filter: grayscale(30%);
 	transition: filter 0.2s;
 }
 .partner-logo:hover {
     filter: grayscale(0%);
+}
+
+/* Added ids to each logo to control height individually*/
+#mellon-logo {
+	height: 2.5em;
+}
+
+#ut-logo {
+	height: 2.5em;
+}
+
+#caribe-digital-logo {
+	height: 3.5em;
+}
+
+#latino-studies-logo {
+	height: 4em;
 }
 
 /* About Project Section */
@@ -983,6 +1000,16 @@ body {
 
 .single-scholar-gallery h2 {
     text-align: center;
+}
+
+.single-scholar-gallery h3 {
+	text-align: center;
+	padding: 1% 0 2% 0;
+	color: #2f4f4f;
+}
+
+#second-h3 {
+	padding-top: 7%;
 }
 
 .single-gallery-grid {
