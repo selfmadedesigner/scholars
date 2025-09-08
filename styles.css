@@ -1470,7 +1470,7 @@ body {
 .main-sponsor-content h3,
 .sponsor-content h3 {
     color: #1a355e;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     margin-bottom: 10px;
     margin-top: 0;
     font-weight: 600;
@@ -1521,8 +1521,12 @@ body {
     justify-content: center;
 }
 
+#ut-about-logo img {
+	width: 80%;
+}
+
 .sponsor-logo {
-    width: 55%;
+    width: 71%;
     height: auto;
     border-radius: 8px;
     background: #fff;
@@ -1538,7 +1542,6 @@ body {
 
 .sponsor-content h3 {
     color: #1a355e;
-    font-size: 1.15rem;
     margin-bottom: 10px;
     margin-top: 0;
     font-weight: 600;
