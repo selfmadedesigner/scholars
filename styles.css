@@ -197,6 +197,7 @@ body {
 	align-items: center;
 	gap: 5%;
 	flex-wrap: wrap;
+    padding-right: 5%;
 }
 
 .partner-logo {
