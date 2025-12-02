@@ -159,6 +159,7 @@ body {
     font-weight: 400;
 }
 
+/*
 @media (max-width: 700px) {
     .footer-container {
         flex-direction: column;
@@ -174,7 +175,7 @@ body {
         width: 100%;
         margin-top: 8px;
     }
-}
+}*/
 
 /* Partners Section Style */
 
@@ -396,6 +397,7 @@ body {
     padding-bottom: 7%;
 } */
 
+/* 
 @media (max-width: 900px) {
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -408,7 +410,7 @@ body {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(8, auto);
     }
-}
+} */
 
 /* Cafecito Section Style */
 
@@ -586,6 +588,7 @@ body {
     margin: 0;
 }
 
+/*
 @media (max-width: 900px) {
     .scholar-hero-content {
         max-width: 100vw;
@@ -596,7 +599,7 @@ body {
         min-height: 180px;
         height: auto;
     }
-}
+}*/
 
 /* Quote Section Style */
 
@@ -651,7 +654,7 @@ body {
     margin-top: 10px;
     display: block;
 }
-
+/*
 @media (max-width: 700px) {
     .quote-section {
         padding: 24px 8px 18px 8px;
@@ -664,7 +667,7 @@ body {
         font-size: 1.2rem;
         margin-top: 18px;
     }
-}
+}*/
 
 /* Scholar Tabs Style */
 
@@ -758,7 +761,7 @@ body {
     align-items: center;
 }
 
-/* Media queries for responsive Design */
+/* Media queries for responsive Design 
 @media (max-width: 900px) {
     .nav-container {
         padding: 0 16px;
@@ -861,7 +864,7 @@ body {
         width: 100%;
         max-width: 320px;
     }
-}
+} */
 
 #scholar-info {
     display: flex;
@@ -974,6 +977,7 @@ body {
     filter: none;
 }
 
+/*
 @media (max-width: 800px) {
     .scholar-video-section {
         flex-direction: column;
@@ -988,7 +992,7 @@ body {
         overflow-x: auto;
         gap: 12px;
     }
-}
+}*/
 
 /* Single Scholar Gallery Styles */
 .single-scholar-gallery {
@@ -1035,6 +1039,7 @@ body {
     box-shadow: 0 8px 24px #f9981f33;
 }
 
+/*
 @media (max-width: 900px) {
     .single-gallery-grid {
         column-count: 2;
@@ -1044,7 +1049,7 @@ body {
     .single-gallery-grid {
         column-count: 1;
     }
-}
+}*/
 
 /* Lightbox Styles */
 .lightbox {
@@ -1221,6 +1226,7 @@ body {
 	font-weight: bold;
 }
 
+/*
 @media (max-width: 1000px) {
     .project-header-flex {
         flex-direction: column;
@@ -1240,7 +1246,7 @@ body {
         font-size: 2rem;
         padding: 12px 10px 10px 10px;
     }
-}
+} */
 
 .project-mission {
     display: flex;
@@ -1327,6 +1333,7 @@ body {
     display: block;
 }
 
+/*
 @media (max-width: 900px) {
     .project-mission {
         flex-direction: column;
@@ -1346,7 +1353,7 @@ body {
     .project-mission h2 {
         font-size: 1.5rem;
     }
-}
+}*/
 
 /* Project Sponsors Section Style */
 
@@ -1484,7 +1491,7 @@ body {
     font-weight: 400;
 }
 
-/* Stack sponsors vertically on small screens */
+/* Stack sponsors vertically on small screens 
 @media (max-width: 900px) {
     .main-sponsor,
     .secondary-sponsors {
@@ -1501,7 +1508,7 @@ body {
     .sponsor-image {
         margin-bottom: 12px;
     }
-}
+} */
 
 .sponsor {
     display: flex;
@@ -1554,6 +1561,7 @@ body {
     font-weight: 400;
 }
 
+/*
 @media (max-width: 700px) {
     .secondary-sponsors {
         padding: 18px 8px;
@@ -1569,7 +1577,7 @@ body {
     .sponsor-content {
         text-align: center;
     }
-}
+} */
 
 /* Team About Page Styles */
 
@@ -1720,6 +1728,7 @@ body {
     border-color: #f9981f55;
 }
 
+/*
 @media (max-width: 900px) {
     .leadership-list {
         gap: 18px;
@@ -1735,7 +1744,7 @@ body {
         gap: 18px;
         align-items: center;
     }
-}
+}*/
 
 /* Contact Section Styles */
 .contact-section {
@@ -1834,6 +1843,7 @@ body {
     text-decoration: underline;
 }
 
+/*
 @media (max-width: 600px) {
     .contact-section {
         padding: 18px 6px 18px 6px;
@@ -1842,7 +1852,7 @@ body {
         flex-direction: column;
         gap: 10px;
     }
-}
+}*/
 
 /* policy page styles */
         .policy-container {

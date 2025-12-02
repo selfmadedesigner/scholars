@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Play Audio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/main.js" defer></script>
+    <style>
+        body {
+            background: #fff8f0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+        }
+        .audio-container {
+            max-width: 500px;
+            margin: 80px auto 40px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 18px rgba(249,152,31,0.07);
+            padding: 40px 32px 32px 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h2 {
+            color: #f9981f;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        audio {
+            width: 100%;
+            margin-top: 16px;
+            outline: none;
+            border-radius: 8px;
+            background: #eff7fa;
+        }
+        .audio-label {
+            color: #2f4f4f;
+            font-size: 1.08rem;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        .audio-download-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: #f9981f;
+            font-weight: bold;
+            text-decoration: none;
+            background: #fff;
+            border: 1.5px solid #f9981f55;
+            border-radius: 8px;
+            padding: 8px 18px;
+            transition: background 0.18s, color 0.18s;
+        }
+        .audio-download-link:hover {
+            background: #f9981f;
+            color: #fff;
+        }
+        @media (max-width: 600px) {
+            .audio-container {
+                padding: 18px 8px 18px 8px;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    <div class="audio-container">
+        <h2>Event Audio File</h2>
+        <div class="audio-label">Cafecito with Ángel Nakamura</div>
+        <audio controls>
+            <source src="resources/angel-nakamura/CafecitoAngelNakamura_audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <a href="resources/angel-nakamura/CafecitoAngelNakamura_audio.mp3" download class="audio-download-link">
+            Download MP3
+        </a>
+    </div>
+    <div id="footer-placeholder"></div>
+</body>
+</html>
