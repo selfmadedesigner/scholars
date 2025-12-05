@@ -1,13 +1,37 @@
-<nav class="main-nav">
+<!--<nav class="main-nav">
     <div class="nav-container">
         <a href="index.html"><img src="images/hisaj-geo-logo-test.png" alt="ScholarSite Logo" class="nav-logo-img">
         </a><span class="nav-logo"></span>
         <ul class="nav-links">
             <li><a href="index.html#scholar-hero">Home</a></li>
-            <!--<li><a href="/team.html">Team</a></li>-->
             <li><a href="scholars.html">Scholars</a></li>
             <li><a href="about-project.html">About the Project</a></li>
-            <!--<li><a href="index.html#scholar-gallery">Gallery</a></li>-->
         </ul>
     </div>
+</nav>-->
+
+<nav class="main-nav" role="navigation" aria-label="Main">
+  <div class="nav-container">
+    <!-- brand link -->
+    <a href="index.html" class="nav-brand" aria-label="Home">
+      <img src="images/hisaj-geo-logo-test.png" alt="High Impact Scholars Logo" class="nav-brand-img">
+    </a>
+
+    <!-- hamburger button (kept class .nav-logo so existing JS continues to work) -->
+    <button class="nav-logo" type="button" aria-expanded="false" aria-controls="main-nav-links" aria-label="Toggle navigation" tabindex="0">
+      <!-- simple 3-line SVG, black bars -->
+      <svg width="28" height="20" viewBox="0 0 28 20" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+        <rect y="0" width="28" height="2.6" rx="1.3" fill="#222"/>
+        <rect y="8.7" width="28" height="2.6" rx="1.3" fill="#222"/>
+        <rect y="17.4" width="28" height="2.6" rx="1.3" fill="#222"/>
+      </svg>
+    </button>
+
+    <!-- nav links -->
+    <ul id="main-nav-links" class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="scholars.html">Scholars</a></li>
+      <li><a href="about-project.html">About</a></li>
+    </ul>
+  </div>
 </nav>
