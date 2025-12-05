@@ -23,7 +23,7 @@ body {
     height: 64px;
 }
 
-.nav-logo-img {
+.nav-brand-img {
 	width: 35%;
 	object-fit: contain;
 	margin-right: 12px;
@@ -64,6 +64,17 @@ body {
     font-weight: bold;
     text-decoration: none;
 }
+
+/* Default (desktop) state: show links, hide hamburger button */
+.nav-logo {
+  display: none; /* hide hamburger on larger screens */
+}
+.nav-links {
+  display: flex; /* desktop links shown inline by default */
+  gap: 18px;
+  align-items: center;
+}
+
 
 /* HOMEPAGE*/
 /* Main Hero Section Style */
@@ -1906,3 +1917,363 @@ body {
                 padding: 18px 8px 18px 8px;
             }
         }
+
+
+
+/* MEDIA QUERIES FOR RESPONSIVE DESIGN */
+
+/* NAVIGATION */
+
+/* Small-screen (hamburger) rules — 300px to 900px */
+@media (min-width: 300px) and (max-width: 900px) {
+
+.nav-brand-img {
+	width: 50%;
+}
+
+  .nav-logo {
+    display: inline-flex; /* show SVG button on small screens */
+    align-items: center;
+    justify-content: center;
+  }
+
+/* JS hamburger menu styles (for screen widths 300px - 900px) */
+@media (min-width:300px) and (max-width:900px) {
+
+  .nav-logo {
+	padding: 8px;
+	margin-left: 30%;
+	border: none;
+	background: none;
+}
+
+  /* hide desktop inline links on small screens; shown when .open is added by JS */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;               /* adjust if your nav height changes */
+    right: 12px;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    flex-direction: column;
+    padding: 8px 6px;
+    z-index: 250;
+    min-width: 200px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li { margin: 0; }
+  .nav-links a {
+    display: block;
+    padding: 10px 12px;
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .nav-links a:hover { color: #f9981f; }
+
+  /* accessible focus styles */
+.nav-logo:focus {
+	outline-offset: 4px;
+	background: #eff7fa;
+}
+
+  /* show menu when JS toggles .open on .nav-links and sets aria-expanded on .nav-logo */
+  .nav-links {
+    display: none;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+/* end hamburger menu styles */
+/* END NAVIGATION */
+}
+
+/* HOMEPAGE */
+/* Disable hero image on small screens and adjust font-sizes*/
+.hero-image img {
+	display: none;
+}
+
+.hero-content {
+	padding: 7%;
+}
+
+.hero-content h1 {
+	font-size: 1.5em;
+}
+
+.hero-content h2 {
+	font-size: 1.2em;
+}
+
+.partners-logos {
+	display: block;
+}
+
+.logo-container {
+	padding-bottom: 4%;
+}
+
+#caribe-digital-logo {
+	height: 3.5em;
+}
+
+.about-project {
+	padding: 7%;
+	padding-top: 1%;
+	padding-bottom: 0;
+    margin-top: 0;
+}
+
+.project-image-container img {
+	width: 100%;
+}
+
+.cafecito-section {
+	margin: 0;
+	padding: 0px 10%;
+}
+
+.cafecito-img {
+	margin-top: 15%;
+	width: 260px;
+}
+
+/* Display scholars grids in single column on small screens */
+.gallery-grid {
+	grid-template-columns: none;
+}
+
+.team-img {
+	width: 75%;
+}
+
+/* END HOMEPAGE */
+
+/* Footer*/
+.footer-links .footer-nav {
+	display: block;
+}
+
+.footer-nav a {
+	font-size: .8em;
+}
+
+.footer-section.copyright p {
+	font-size: 0.7em;
+}
+
+/* end footer */
+
+/* ABOUT PROJECT PAGE */
+.project-page p {
+	font-size: 1em;
+}
+
+.project-page h2 {
+	font-size: 1.7em;
+}
+
+.project-header-flex {
+	display: block;
+	padding-top: 0;
+}
+
+.project-header-content {
+	padding: 3%;
+}
+
+.header-highlight {
+	margin: 0;
+}
+
+.impact-statement {
+	padding: 5%;
+	padding-top: 0;
+}
+
+.project-header-image img {
+	width: 87%;
+}
+
+.project-purpose {
+	max-width: 93%;
+	padding-left: 3.7%;
+	margin-top: 5%;
+}
+
+.project-mission {
+	display: block;
+}
+
+.project-sponsors {
+	padding: 1% 5%;
+}
+
+.sponsor {
+	display: block;
+}
+
+.sponsor-image {
+	padding-bottom: 10%;
+}
+
+.sponsor-content p {
+	padding-bottom: 7%;
+}
+
+.leader-card {
+	display: block;
+}
+
+.leader-image {
+	padding-left: 28%;
+	padding-bottom: 9%;
+}
+
+/* END ABOUT PROJECT PAGE */
+
+/* All Scholars Page */
+.scholars-intro {
+	padding: 1% 7% !important;
+	margin-top: 5% !important;
+}
+
+.gallery-grid {
+	grid-template-columns: none;
+	padding-bottom: 10%;
+}
+
+/* SINGLE-SCHOLAR PAGES */
+
+.scholar-hero {
+	min-height: 0;
+	height: 38vh;
+}
+
+.scholar-hero-content {
+	margin-top: 38%;
+	padding: 0 0 7% 3%;
+	margin-left: 15%;
+}
+
+#scholar-name {
+	font-size: 1.3em;
+}
+
+#scholar-description {
+	font-size: 1em;
+}
+
+.quote-section {
+	margin-bottom: 0;
+	margin-top: 4%;
+}
+
+.quote-section p {
+	font-size: 1.4em;
+}
+
+.single-scholar-page p {
+	font-size: 1rem;
+}
+
+.single-scholar-page h2 {
+	font-size: 1.4rem;
+}
+
+.quote-section {
+	margin-bottom: 0;
+}
+
+.scholar-tab-section {
+	margin-top: 0;
+}
+
+/* Scholars video section */ 
+
+.scholar-video-section {
+	display: block;
+}
+
+.main-video {
+	height: 20vh;
+	margin-bottom: 10%;
+	margin-left: -6%;
+	min-width: 120%;
+}
+
+.main-video iframe {
+	height: 26vh;
+}
+
+.video-thumbnails {
+	margin-left: 4%;
+	max-height: none;
+	width: 100%;
+}
+
+.video-thumb {
+	width: 95%;
+	height: 15vh;
+}
+
+.video-thumb iframe {
+	height: 15vh;
+}
+
+/* Scholars gallery section */
+.single-gallery-grid {
+	column-count: 1;
+	width: 85%;
+}
+
+.single-scholar-gallery {
+	margin-bottom: 0;
+}
+
+/* Load smaller hero image and adjust content positioning */
+#trizoli .scholar-hero {
+	background-image: url("images/scholar-page/talita-trizoli/talita-trizoli-mobile-hero.png") !important;
+}
+
+#reyes .scholar-hero {
+    background-image: url("images/scholar-page/luz-mely/luz-mely-reyes-mobile-hero.png") !important;
+}
+
+#nakamura .scholar-hero {
+    background-image: url("images/scholar-page/angel-nakamura/angel-nakamura-mobile-hero.png") !important;
+}
+
+#arocena .scholar-hero {
+    background-image: url("images/scholar-page/dayme-arocena/dayme-arocena-mobile-hero.png") !important;
+}
+
+#baez .scholar-hero {
+    background-image: url("images/scholar-page/frank-baez/frank-baez-mobile-hero.png") !important;
+}
+
+#hamlet .scholar-hero {
+    background-image: url("images/scholar-page/lester-hamlet/lester-hamlet-mobile-hero.png") !important;
+}
+
+#mars .scholar-hero {
+    background-image: url("images/scholar-page/tessa-mars/tessa-mars-mobile-profile.png") !important;
+}
+
+/* Policy pages */
+.policy-container {
+	margin-top: 0;
+	padding: 7% 8%;
+	margin-bottom: 0;
+}
+
+
+
+
+}
