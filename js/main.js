@@ -1,9 +1,57 @@
+// Initialize nav toggle (called after nav.html is injected)
+function initNavToggle() {
+  const navLogo = document.querySelector('.nav-logo');
+  const navLinks = document.querySelector('.nav-links');
+  if (!navLogo || !navLinks) return;
+
+  // ensure accessible role/tabindex
+  navLogo.setAttribute('role', 'button');
+  navLogo.setAttribute('tabindex', '0');
+  if (!navLogo.hasAttribute('aria-expanded')) navLogo.setAttribute('aria-expanded', 'false');
+
+  const openMenu = () => {
+    navLinks.classList.add('open');
+    navLogo.setAttribute('aria-expanded', 'true');
+  };
+  const closeMenu = () => {
+    navLinks.classList.remove('open');
+    navLogo.setAttribute('aria-expanded', 'false');
+  };
+  const toggleMenu = () => {
+    if (navLinks.classList.contains('open')) closeMenu(); else openMenu();
+  };
+
+  navLogo.addEventListener('click', toggleMenu);
+  navLogo.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleMenu();
+    }
+  });
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!navLinks.classList.contains('open')) return;
+    if (!navLinks.contains(e.target) && !navLogo.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
+}
+
 // Load navigation
 fetch('nav.html')
   .then(res => res.text())
   .then(data => {
-    document.getElementById('nav-placeholder').innerHTML = data;
-  });
+    const placeholder = document.getElementById('nav-placeholder');
+    if (placeholder) placeholder.innerHTML = data;
+    initNavToggle(); // init after nav injected
+  })
+  .catch(err => console.error('Failed to load nav.html', err));
 
 // Load footer
 fetch('footer.html')
